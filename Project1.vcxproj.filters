@@ -121,6 +121,12 @@
     <None Include="ASSETS\SCRIPTS\ASTERIODS\projectile.lua" />
     <None Include="ASSETS\SCRIPTS\ASTERIODS\game_data.lua" />
     <None Include="ASSETS\SCRIPTS\ASTERIODS\hud.lua" />
+    <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\utilities.lua" />
+    <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\projectile.lua" />
+    <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\player.lua" />
+    <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\entityDefs.lua" />
+    <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\assetDefs.lua" />
+    <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\game_data.lua" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ENGINE\WINDOW\Window.h">

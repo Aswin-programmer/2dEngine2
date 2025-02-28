@@ -1,5 +1,5 @@
 Projectile = {}
-Projectile.__index = Projectile 
+Projectile.__index = Projectile
 function Projectile:Create(params)
 	local this = 
 	{
@@ -16,7 +16,7 @@ function Projectile:Create(params)
 
 	this.m_ProjectileLifeTime = projectile.life_time or 2000
 	this.m_Speed = projectile.proj_speed or 10
-	this.m_LifeTimer = Timer();
+	this.m_LifeTimer = Timer()
 
 	local projectEnt = Entity(this.m_EntityID)
 	local transform = projectEnt:get_component(Transform)
@@ -31,7 +31,9 @@ end
 function Projectile:Update()
 	local projectEnt = Entity(self.m_EntityID)
 	local transform = projectEnt:get_component(Transform)
-	transform.position = transform.position + self.m_Dir * self.m_Speed
+	if (transform.position) then
+		transform.position = transform.position + (self.m_Dir * self.m_Speed)
+	end
 end
 
 function Projectile:TimesUp()
@@ -42,4 +44,3 @@ function Projectile:Destroy()
 	local projectile = Entity(self.m_EntityID)
 	projectile:kill()
 end
-

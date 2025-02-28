@@ -190,6 +190,12 @@
     <None Include="ASSETS\SCRIPTS\ASTERIODS\ship.lua" />
     <None Include="ASSETS\SCRIPTS\ASTERIODS\utilities.lua" />
     <None Include="ASSETS\SCRIPTS\main.lua" />
+    <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\assetDefs.lua" />
+    <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\entityDefs.lua" />
+    <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\game_data.lua" />
+    <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\player.lua" />
+    <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\projectile.lua" />
+    <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\utilities.lua" />
     <None Include="ASSETS\SHADER\shader.frag" />
     <None Include="ASSETS\SHADER\shader.vert" />
     <None Include="ENGINE\ECS\Entity.inl" />
