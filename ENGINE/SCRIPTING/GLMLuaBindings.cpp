@@ -40,7 +40,8 @@ void CreateVec2Bind(sol::state& lua)
 		sol::meta_function::addition, vec2_addition_overloads,
 		sol::meta_function::subtraction, vec2_subtraction_overloads,
 		"length", [](const glm::vec2& v) { return glm::length(v); },
-		"lengthSq", [](const glm::vec2& v) { return glm::length2(v); }
+		"lengthSq", [](const glm::vec2& v) { return glm::length2(v); },
+		"normalize", [](const glm::vec2& v) { return glm::normalize(v); }
 	);
 }
 // glm::vec3

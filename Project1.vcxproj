@@ -196,6 +196,7 @@
     <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\player.lua" />
     <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\projectile.lua" />
     <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\utilities.lua" />
+    <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\zombie.lua" />
     <None Include="ASSETS\SHADER\shader.frag" />
     <None Include="ASSETS\SHADER\shader.vert" />
     <None Include="ENGINE\ECS\Entity.inl" />
@@ -250,6 +251,7 @@
     <Image Include="ASSETS\TEXTURES\score.png" />
     <Image Include="ASSETS\TEXTURES\ship.png" />
     <Image Include="ASSETS\TEXTURES\SpriteLetters.png" />
+    <Image Include="ASSETS\TOP_DOWN\ZOMBIE\move\skeleton-move_0-sheet.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

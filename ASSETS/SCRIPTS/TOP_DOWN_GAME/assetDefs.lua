@@ -4,7 +4,8 @@ AssetDefs =
 	{
 		{ name = "playerIdle", path = "ASSETS/TOP_DOWN/player/survivor-idle-sheet_enhanced.png"},
 		{ name = "playerMove", path = "ASSETS/TOP_DOWN/player/survivor-move_shotgun_0-sheet_enhanced.png"},
-		{ name = "proj_1", path = "ASSETS/TOP_DOWN/bullet/bullet.png"}
+		{ name = "proj_1", path = "ASSETS/TOP_DOWN/bullet/bullet.png"},
+		{ name = "zombieMove", path = "ASSETS/TOP_DOWN/ZOMBIE/move/skeleton-move_0-sheet.png"}
 	}
 }
 

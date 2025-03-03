@@ -66,9 +66,7 @@ function Player:UpdatePlayer()
 		transform.rotation = transform.rotation - self.m_AngularSpeed
 	elseif Keyboard.pressed(KEY_D) then
 		transform.rotation = transform.rotation + self.m_AngularSpeed
-	end
-
-	if Keyboard.pressed(KEY_W) then
+	elseif Keyboard.pressed(KEY_W) then
 		transform.position = transform.position + forward * self.m_ForwardSpeed
 		self.needMOVE_Enable = true
 		self.needIDLE_Enable = false
@@ -76,23 +74,23 @@ function Player:UpdatePlayer()
 		transform.position = transform.position - forward * self.m_ForwardSpeed
 		self.needMOVE_Enable = true
 		self.needIDLE_Enable = false
-	else
-		self.needMOVE_Enable = false
-		self.needIDLE_Enable = true
-	end
-
-	if Keyboard.pressed(KEY_SPACE) then
+	elseif Keyboard.just_pressed(KEY_SPACE) then
 		local projectile = Projectile:Create(
 			{
 				def = "proj1",
 				dir = forward,
 				start_pos = vec2(
-					transform.position.x + sprite.width/2,
-					transform.position.y + sprite.height/2
+					transform.position.x + (sprite.width/2) + (((180 - (sprite.width/2)) * math.cos(math.rad(transform.rotation))) - ((97 - (sprite.height/2)) * math.sin(math.rad(transform.rotation)))),
+					transform.position.y + (sprite.height/2) + (((180 - (sprite.width/2)) * math.sin(math.rad(transform.rotation))) + ((97 - (sprite.height/2)) * math.cos(math.rad(transform.rotation))))
 				),
 				rotation = transform.rotation
 			}
 		)
+		self.needMOVE_Enable = true
+		self.needIDLE_Enable = false
 		AddProjectile(projectile)
+	else
+		self.needMOVE_Enable = false
+		self.needIDLE_Enable = true
 	end
 end

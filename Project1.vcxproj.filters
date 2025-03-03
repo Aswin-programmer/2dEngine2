@@ -127,6 +127,7 @@
     <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\entityDefs.lua" />
     <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\assetDefs.lua" />
     <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\game_data.lua" />
+    <None Include="ASSETS\SCRIPTS\TOP_DOWN_GAME\zombie.lua" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ENGINE\WINDOW\Window.h">
@@ -267,6 +268,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="ASSETS\TEXTURES\explosions_sheet.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="ASSETS\TOP_DOWN\ZOMBIE\move\skeleton-move_0-sheet.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

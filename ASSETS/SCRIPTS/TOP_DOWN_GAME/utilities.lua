@@ -1,6 +1,15 @@
 ---------------------------------------------------------------------------
 --Helper Functions
 ----------------------------------------------------------------------------
+players = {}
+function AddPlayer(player)
+	table.insert(players,player)
+end
+
+
+---------------------------------------------------------------------------
+--Helper Functions
+----------------------------------------------------------------------------
 
 function LoadEntity(def)
 	assert(def,"Def doesn't exist")
@@ -81,5 +90,45 @@ function UpdateProjectiles()
 		else
 			v:Update()
 		end
+	end
+end
+
+------------------------------------------------------------------------
+-------------ZOMBIE-----------------------------------------------
+--------------------------------------------------------------------------
+zombies = {}
+function AddZombies(zombie)
+	table.insert(zombies,zombie)
+end
+
+function getRandomZombiePosition()
+    local side = math.random(4) -- Pick a random side (1=Left, 2=Right, 3=Top, 4=Bottom)
+    local offset = 100 -- Distance away from screen
+
+    if side == 1 then  -- Left
+        return vec2(-offset, math.random(WINDOW_HEIGHT))
+    elseif side == 2 then  -- Right
+        return vec2(WINDOW_WIDTH + offset, math.random(WINDOW_HEIGHT))
+    elseif side == 3 then  -- Top
+        return vec2(math.random(WINDOW_WIDTH), -offset)
+    else  -- Bottom
+        return vec2(math.random(WINDOW_WIDTH), WINDOW_HEIGHT + offset)
+    end
+end
+
+
+zombieTimer = Timer()
+zombieTimer:start()
+function SpamZombies()
+	if zombieTimer:elapsed_sec() > 2 then
+		local zombie = Zombie:Create("Zombie")
+		AddZombies(zombie)
+		zombieTimer:restart()
+	end
+end
+
+function updateZombies()
+	for k,v in pairs(zombies) do
+		v:Update()
 	end
 end

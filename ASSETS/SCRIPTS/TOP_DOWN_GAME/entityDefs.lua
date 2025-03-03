@@ -59,3 +59,31 @@ ProjectileDefs =
 		proj_speed = 10
 	}
 }
+
+ZombieDefs = 
+{
+	Zombie = 
+	{
+		group = "zombie",
+		components = 
+		{
+			transform = 
+			{
+				position = {x=0,y=0},
+				scale = {x=1,y=1},
+				rotation = 0
+			},
+			sprite = 
+			{
+				asset_name = "zombieMove",
+				width = 288,
+				height = 311,
+				start_x = 0, start_y = 0,
+				layer = 3
+			}
+		},
+		zombie_speed_min = 1,
+		zombie_speed_max = 2,
+		zombie_health = 15
+	}
+}
