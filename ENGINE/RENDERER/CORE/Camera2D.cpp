@@ -2,7 +2,7 @@
 
 Camera2D::Camera2D()
 	:
-	Camera2D(640,480)
+	Camera2D(Window::getWidth(), Window::getHeight())
 {
 }
 

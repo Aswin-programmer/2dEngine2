@@ -47,7 +47,7 @@ bool Application::Initialize()
 	//Logger
 	log::Init();
 
-	Window::init(640, 480, "2DENGINE");
+	Window::init(1366, 768, "2DENGINE");
 
 	auto assetManager = std::make_shared<AssetManager>();
 	if (!assetManager)
