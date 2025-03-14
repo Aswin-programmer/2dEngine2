@@ -120,6 +120,7 @@ void ScriptingSystem::RegisterLuaBindings(sol::state& lua, Registry& registry)
 	GLMBindings::CreateGLMBindings(lua);
 	InputManager::CreateLuaInputBindings(lua);
 	AssetManager::CreateLuaAssetManager(lua, registry);
+	SoundSystem::CreateLuaSoundSystemBind(lua, registry);
 
 	create_timer(lua);
 	

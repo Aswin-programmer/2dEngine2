@@ -77,7 +77,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)EXTERNAL\SOL3;$(SolutionDir)EXTERNAL\LUA\include;$(SolutionDir)EXTERNAL\EnTT;$(SolutionDir)EXTERNAL\GLM;$(SolutionDir)EXTERNAL\STBI;$(SolutionDir)EXTERNAL\SPDLOG\include;$(SolutionDir)EXTERNAL\GLFW\include;$(SolutionDir)EXTERNAL\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)EXTERNAL\FMOD_API\studio\inc;$(SolutionDir)EXTERNAL\FMOD_API\core\inc;$(SolutionDir)EXTERNAL\SOL3;$(SolutionDir)EXTERNAL\LUA\include;$(SolutionDir)EXTERNAL\EnTT;$(SolutionDir)EXTERNAL\GLM;$(SolutionDir)EXTERNAL\STBI;$(SolutionDir)EXTERNAL\SPDLOG\include;$(SolutionDir)EXTERNAL\GLFW\include;$(SolutionDir)EXTERNAL\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
@@ -96,7 +96,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)EXTERNAL\SOL3;$(SolutionDir)EXTERNAL\LUA\include;$(SolutionDir)EXTERNAL\EnTT;$(SolutionDir)EXTERNAL\GLM;$(SolutionDir)EXTERNAL\STBI;$(SolutionDir)EXTERNAL\SPDLOG\include;$(SolutionDir)EXTERNAL\GLFW\include;$(SolutionDir)EXTERNAL\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)EXTERNAL\FMOD_API\studio\inc;$(SolutionDir)EXTERNAL\FMOD_API\core\inc;$(SolutionDir)EXTERNAL\SOL3;$(SolutionDir)EXTERNAL\LUA\include;$(SolutionDir)EXTERNAL\EnTT;$(SolutionDir)EXTERNAL\GLM;$(SolutionDir)EXTERNAL\STBI;$(SolutionDir)EXTERNAL\SPDLOG\include;$(SolutionDir)EXTERNAL\GLFW\include;$(SolutionDir)EXTERNAL\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
@@ -115,7 +115,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)EXTERNAL\SOL3;$(SolutionDir)EXTERNAL\LUA\include;$(SolutionDir)EXTERNAL\EnTT;$(SolutionDir)EXTERNAL\GLM;$(SolutionDir)EXTERNAL\STBI;$(SolutionDir)EXTERNAL\SPDLOG\include;$(SolutionDir)EXTERNAL\GLFW\include;$(SolutionDir)EXTERNAL\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)EXTERNAL\FMOD_API\studio\inc;$(SolutionDir)EXTERNAL\FMOD_API\core\inc;$(SolutionDir)EXTERNAL\SOL3;$(SolutionDir)EXTERNAL\LUA\include;$(SolutionDir)EXTERNAL\EnTT;$(SolutionDir)EXTERNAL\GLM;$(SolutionDir)EXTERNAL\STBI;$(SolutionDir)EXTERNAL\SPDLOG\include;$(SolutionDir)EXTERNAL\GLFW\include;$(SolutionDir)EXTERNAL\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
@@ -134,7 +134,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)EXTERNAL\SOL3;$(SolutionDir)EXTERNAL\LUA\include;$(SolutionDir)EXTERNAL\EnTT;$(SolutionDir)EXTERNAL\GLM;$(SolutionDir)EXTERNAL\STBI;$(SolutionDir)EXTERNAL\SPDLOG\include;$(SolutionDir)EXTERNAL\GLFW\include;$(SolutionDir)EXTERNAL\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)EXTERNAL\FMOD_API\studio\inc;$(SolutionDir)EXTERNAL\FMOD_API\core\inc;$(SolutionDir)EXTERNAL\SOL3;$(SolutionDir)EXTERNAL\LUA\include;$(SolutionDir)EXTERNAL\EnTT;$(SolutionDir)EXTERNAL\GLM;$(SolutionDir)EXTERNAL\STBI;$(SolutionDir)EXTERNAL\SPDLOG\include;$(SolutionDir)EXTERNAL\GLFW\include;$(SolutionDir)EXTERNAL\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
@@ -158,6 +158,8 @@
     <ClCompile Include="ENGINE\RENDERER\CORE\BatchRenderer.cpp" />
     <ClCompile Include="ENGINE\SCRIPTING\GLMLuaBindings.cpp" />
     <ClCompile Include="ENGINE\SCRIPTING\InputManager.cpp" />
+    <ClCompile Include="ENGINE\SOUNDS\AudioEvent.cpp" />
+    <ClCompile Include="ENGINE\SOUNDS\FMODAudioSystem.cpp" />
     <ClCompile Include="ENGINE\SRC\Application.cpp" />
     <ClCompile Include="ENGINE\RESOURCES\AssetManager.cpp" />
     <ClCompile Include="ENGINE\INPUT\KeyListener.cpp" />
@@ -208,6 +210,8 @@
     <ClInclude Include="ENGINE\ECS\COMPONENTS\ScriptComponent.h" />
     <ClInclude Include="ENGINE\SCRIPTING\GLMLuaBindings.h" />
     <ClInclude Include="ENGINE\SCRIPTING\InputManager.h" />
+    <ClInclude Include="ENGINE\SOUNDS\AudioEvent.h" />
+    <ClInclude Include="ENGINE\SOUNDS\FMODAudioSystem.h" />
     <ClInclude Include="ENGINE\SRC\Application.h" />
     <ClInclude Include="ENGINE\RESOURCES\AssetManager.h" />
     <ClInclude Include="ENGINE\ECS\COMPONENTS\Identification.h" />
