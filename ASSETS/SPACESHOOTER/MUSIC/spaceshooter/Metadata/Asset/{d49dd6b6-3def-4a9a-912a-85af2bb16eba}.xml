@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EncodableAsset" id="{d49dd6b6-3def-4a9a-912a-85af2bb16eba}">
+		<property name="assetPath">
+			<value>ASTEROID/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b0f51b3d-e702-4c7d-8219-5ffecc7e6f45}</destination>
+		</relationship>
+	</object>
+</objects>

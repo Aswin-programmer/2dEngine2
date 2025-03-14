@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{1155f625-ce96-4a61-b5a6-a6a641208639}">
+		<property name="assetPath">
+			<value>ASTEROID/asteroid.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.3489115646258503</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b0f51b3d-e702-4c7d-8219-5ffecc7e6f45}</destination>
+		</relationship>
+	</object>
+</objects>
