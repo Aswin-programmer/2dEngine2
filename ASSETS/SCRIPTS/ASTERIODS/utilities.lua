@@ -65,8 +65,8 @@ function LoadEntity(def)
 end
 
 function LoadBackground()
-	for i = 0, 2 do 
-		for j = 0, 3 do
+	for i = 0, 4 do 
+		for j = 0, 5 do
 			local bgTile = Entity("", "bg")
 			bgTile:add_component(Transform(vec2(j * 256, i * 256), vec2(1, 1), 0))
 			local sprite = bgTile:add_component(Sprite("bg", 256.0, 256.0, 0, 0, 0))
@@ -75,8 +75,8 @@ function LoadBackground()
 	end
 end
 
-WINDOW_WIDTH = 640
-WINDOW_HEIGHT = 480
+WINDOW_WIDTH = 1366
+WINDOW_HEIGHT = 768
 -- Position = vec2, width/height = float
 function CheckPos(position, width, height)
 	local min_x = 0

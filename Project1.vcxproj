@@ -77,15 +77,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)EXTERNAL\miniaudio;$(SolutionDir)EXTERNAL\SOL3;$(SolutionDir)EXTERNAL\LUA\include;$(SolutionDir)EXTERNAL\EnTT;$(SolutionDir)EXTERNAL\GLM;$(SolutionDir)EXTERNAL\STBI;$(SolutionDir)EXTERNAL\SPDLOG\include;$(SolutionDir)EXTERNAL\GLFW\include;$(SolutionDir)EXTERNAL\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)EXTERNAL\SOL3;$(SolutionDir)EXTERNAL\LUA\include;$(SolutionDir)EXTERNAL\EnTT;$(SolutionDir)EXTERNAL\GLM;$(SolutionDir)EXTERNAL\STBI;$(SolutionDir)EXTERNAL\SPDLOG\include;$(SolutionDir)EXTERNAL\GLFW\include;$(SolutionDir)EXTERNAL\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)EXTERNAL\LUA\lib;$(SolutionDir)EXTERNAL\GLFW\lib-vc2022;$(SolutionDir)EXTERNAL\GLEW\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>lua54.lib;opengl32.lib;glfw3.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)EXTERNAL\FMOD_API\studio\lib\x64;$(SolutionDir)EXTERNAL\FMOD_API\core\lib\x64;$(SolutionDir)EXTERNAL\LUA\lib;$(SolutionDir)EXTERNAL\GLFW\lib-vc2022;$(SolutionDir)EXTERNAL\GLEW\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>lua54.lib;opengl32.lib;glfw3.lib;glew32s.lib;fmod_vc.lib;fmodstudio_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -96,7 +96,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)EXTERNAL\miniaudio;$(SolutionDir)EXTERNAL\SOL3;$(SolutionDir)EXTERNAL\LUA\include;$(SolutionDir)EXTERNAL\EnTT;$(SolutionDir)EXTERNAL\GLM;$(SolutionDir)EXTERNAL\STBI;$(SolutionDir)EXTERNAL\SPDLOG\include;$(SolutionDir)EXTERNAL\GLFW\include;$(SolutionDir)EXTERNAL\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)EXTERNAL\SOL3;$(SolutionDir)EXTERNAL\LUA\include;$(SolutionDir)EXTERNAL\EnTT;$(SolutionDir)EXTERNAL\GLM;$(SolutionDir)EXTERNAL\STBI;$(SolutionDir)EXTERNAL\SPDLOG\include;$(SolutionDir)EXTERNAL\GLFW\include;$(SolutionDir)EXTERNAL\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
@@ -105,8 +105,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)EXTERNAL\LUA\lib;$(SolutionDir)EXTERNAL\GLFW\lib-vc2022;$(SolutionDir)EXTERNAL\GLEW\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>lua54.lib;opengl32.lib;glfw3.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)EXTERNAL\FMOD_API\studio\lib\x64;$(SolutionDir)EXTERNAL\FMOD_API\core\lib\x64;$(SolutionDir)EXTERNAL\LUA\lib;$(SolutionDir)EXTERNAL\GLFW\lib-vc2022;$(SolutionDir)EXTERNAL\GLEW\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>lua54.lib;opengl32.lib;glfw3.lib;glew32s.lib;fmod_vc.lib;fmodstudio_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -115,15 +115,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)EXTERNAL\miniaudio;$(SolutionDir)EXTERNAL\SOL3;$(SolutionDir)EXTERNAL\LUA\include;$(SolutionDir)EXTERNAL\EnTT;$(SolutionDir)EXTERNAL\GLM;$(SolutionDir)EXTERNAL\STBI;$(SolutionDir)EXTERNAL\SPDLOG\include;$(SolutionDir)EXTERNAL\GLFW\include;$(SolutionDir)EXTERNAL\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)EXTERNAL\SOL3;$(SolutionDir)EXTERNAL\LUA\include;$(SolutionDir)EXTERNAL\EnTT;$(SolutionDir)EXTERNAL\GLM;$(SolutionDir)EXTERNAL\STBI;$(SolutionDir)EXTERNAL\SPDLOG\include;$(SolutionDir)EXTERNAL\GLFW\include;$(SolutionDir)EXTERNAL\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)EXTERNAL\LUA\lib;$(SolutionDir)EXTERNAL\GLFW\lib-vc2022;$(SolutionDir)EXTERNAL\GLEW\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>lua54.lib;opengl32.lib;glfw3.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)EXTERNAL\FMOD_API\studio\lib\x64;$(SolutionDir)EXTERNAL\FMOD_API\core\lib\x64;$(SolutionDir)EXTERNAL\LUA\lib;$(SolutionDir)EXTERNAL\GLFW\lib-vc2022;$(SolutionDir)EXTERNAL\GLEW\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>lua54.lib;opengl32.lib;glfw3.lib;glew32s.lib;fmod_vc.lib;fmodstudio_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -134,7 +134,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)EXTERNAL\miniaudio;$(SolutionDir)EXTERNAL\SOL3;$(SolutionDir)EXTERNAL\LUA\include;$(SolutionDir)EXTERNAL\EnTT;$(SolutionDir)EXTERNAL\GLM;$(SolutionDir)EXTERNAL\STBI;$(SolutionDir)EXTERNAL\SPDLOG\include;$(SolutionDir)EXTERNAL\GLFW\include;$(SolutionDir)EXTERNAL\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)EXTERNAL\SOL3;$(SolutionDir)EXTERNAL\LUA\include;$(SolutionDir)EXTERNAL\EnTT;$(SolutionDir)EXTERNAL\GLM;$(SolutionDir)EXTERNAL\STBI;$(SolutionDir)EXTERNAL\SPDLOG\include;$(SolutionDir)EXTERNAL\GLFW\include;$(SolutionDir)EXTERNAL\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
@@ -143,23 +143,21 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)EXTERNAL\LUA\lib;$(SolutionDir)EXTERNAL\GLFW\lib-vc2022;$(SolutionDir)EXTERNAL\GLEW\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>lua54.lib;opengl32.lib;glfw3.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)EXTERNAL\FMOD_API\studio\lib\x64;$(SolutionDir)EXTERNAL\FMOD_API\core\lib\x64;$(SolutionDir)EXTERNAL\LUA\lib;$(SolutionDir)EXTERNAL\GLFW\lib-vc2022;$(SolutionDir)EXTERNAL\GLEW\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>lua54.lib;opengl32.lib;glfw3.lib;glew32s.lib;fmod_vc.lib;fmodstudio_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ENGINE\ECS\COMPONENTS\AnimationComponent.cpp" />
     <ClCompile Include="ENGINE\ECS\COMPONENTS\BoxColliderComponent.cpp" />
     <ClCompile Include="ENGINE\ECS\COMPONENTS\CircleColliderComponent.cpp" />
+    <ClCompile Include="ENGINE\ECS\COMPONENTS\SoundEmitter.cpp" />
+    <ClCompile Include="ENGINE\ECS\COMPONENTS\SoundListener.cpp" />
     <ClCompile Include="ENGINE\ECS\COMPONENTS\SpriteComponent.cpp" />
     <ClCompile Include="ENGINE\ECS\COMPONENTS\TransformComponent.cpp" />
     <ClCompile Include="ENGINE\RENDERER\CORE\BatchRenderer.cpp" />
     <ClCompile Include="ENGINE\SCRIPTING\GLMLuaBindings.cpp" />
     <ClCompile Include="ENGINE\SCRIPTING\InputManager.cpp" />
-    <ClCompile Include="ENGINE\SCRIPTING\SoundBinding.cpp" />
-    <ClCompile Include="ENGINE\SOUNDS\ESSENTIALS\miniaudio_implementation.cpp" />
-    <ClCompile Include="ENGINE\SOUNDS\ESSENTIALS\Music.cpp" />
-    <ClCompile Include="ENGINE\SOUNDS\MUSICPLAYER\MusicPlayer.cpp" />
     <ClCompile Include="ENGINE\SRC\Application.cpp" />
     <ClCompile Include="ENGINE\RESOURCES\AssetManager.cpp" />
     <ClCompile Include="ENGINE\INPUT\KeyListener.cpp" />
@@ -169,6 +167,7 @@
     <ClCompile Include="ENGINE\RENDERER\TEXTURE\Texture.cpp" />
     <ClCompile Include="ENGINE\SRC\main.cpp" />
     <ClCompile Include="ENGINE\SYSTEMS\AnimationSystem.cpp" />
+    <ClCompile Include="ENGINE\SYSTEMS\SoundSystem.cpp" />
     <ClCompile Include="ENGINE\UTILITIES\Time.cpp" />
     <ClCompile Include="ENGINE\UTILITIES\Timer.cpp" />
     <ClCompile Include="ENGINE\WINDOW\INPUT\Keyboard.cpp" />
@@ -203,14 +202,12 @@
     <ClInclude Include="ENGINE\ECS\COMPONENTS\AnimationComponent.h" />
     <ClInclude Include="ENGINE\ECS\COMPONENTS\BoxColliderComponent.h" />
     <ClInclude Include="ENGINE\ECS\COMPONENTS\CircleColliderComponent.h" />
+    <ClInclude Include="ENGINE\ECS\COMPONENTS\SoundEmitter.h" />
+    <ClInclude Include="ENGINE\ECS\COMPONENTS\SoundListener.h" />
     <ClInclude Include="ENGINE\RENDERER\CORE\BatchRenderer.h" />
     <ClInclude Include="ENGINE\ECS\COMPONENTS\ScriptComponent.h" />
     <ClInclude Include="ENGINE\SCRIPTING\GLMLuaBindings.h" />
     <ClInclude Include="ENGINE\SCRIPTING\InputManager.h" />
-    <ClInclude Include="ENGINE\SCRIPTING\SoundBinding.h" />
-    <ClInclude Include="ENGINE\SOUNDS\ESSENTIALS\Music.h" />
-    <ClInclude Include="ENGINE\SOUNDS\ESSENTIALS\SoundParams.h" />
-    <ClInclude Include="ENGINE\SOUNDS\MUSICPLAYER\MusicPlayer.h" />
     <ClInclude Include="ENGINE\SRC\Application.h" />
     <ClInclude Include="ENGINE\RESOURCES\AssetManager.h" />
     <ClInclude Include="ENGINE\ECS\COMPONENTS\Identification.h" />
@@ -225,6 +222,7 @@
     <ClInclude Include="ENGINE\RENDERER\TEXTURE\Texture.h" />
     <ClInclude Include="ENGINE\RENDERER\TEXTURE\TextureLoader.h" />
     <ClInclude Include="ENGINE\SYSTEMS\AnimationSystem.h" />
+    <ClInclude Include="ENGINE\SYSTEMS\SoundSystem.h" />
     <ClInclude Include="ENGINE\UTILITIES\Time.h" />
     <ClInclude Include="ENGINE\UTILITIES\Timer.h" />
     <ClInclude Include="ENGINE\WINDOW\INPUT\Button.h" />

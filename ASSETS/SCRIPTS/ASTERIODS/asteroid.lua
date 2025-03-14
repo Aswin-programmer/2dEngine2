@@ -16,6 +16,14 @@ function Asteroid:Create(def)
 	}
 	this.m_EntityID = LoadEntity(asteroid)
 	local entity = Entity(this.m_EntityID)
+	local sound = entity:add_component(
+		SoundEmitter(
+			"event:/Asteroid/asteroid_timeline"
+		)
+	)
+	sound:play()
+	--print("Volume [" ..sound:get_volume() .."]")
+	
 	local transform = entity:get_component(Transform)
 	transform.position = GetRandomPosition()
 	setmetatable(this, self)

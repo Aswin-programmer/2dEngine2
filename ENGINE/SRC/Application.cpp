@@ -47,7 +47,7 @@ bool Application::Initialize()
 	//Logger
 	log::Init();
 
-	Window::init(640, 480, "2DENGINE");
+	Window::init(1366, 768, "2DENGINE");
 
 	auto assetManager = std::make_shared<AssetManager>();
 	if (!assetManager)
@@ -161,6 +161,33 @@ bool Application::Initialize()
 	{
 		LOG_ERROR("Failed to load the shaders!");
 		return false;
+	}
+
+	//Initializing Sounds:
+	// Initialize audio
+	auto soundSystem = std::make_shared<SoundSystem>();
+	if (!soundSystem)
+	{
+		LOG_ERROR("Failed to create the sound system!");
+		return false;
+	}
+	if (!pRegistry->AddToContext<std::shared_ptr<SoundSystem>>(soundSystem))
+	{
+		LOG_ERROR("Failed to add the soundSystem to the registry context!");
+		return false;
+	}
+
+	if (!soundSystem->Initialize())
+	{
+		LOG_ERROR("Failed to initialize audio system!");
+		return 1;
+	}
+
+	// Load banks and check result
+	bool banksLoaded = soundSystem->LoadBanks("C:/Aswin_Game_DEV/2DEngine2/Project1/ASSETS/SPACESHOOTER/MUSIC/spaceshooter/Build/Desktop");
+	if (!banksLoaded) {
+		std::cerr << "Failed to load audio banks!" << std::endl;
+		return 1;
 	}
 
 	//Lua and ENTT::meta BINDING
@@ -283,6 +310,15 @@ void Application::Update()
 	auto& mouse = inputManager.GetMouse();
 	mouse.Update();
 
+	//Update sounds
+	auto& soundSystem = pRegistry->GetContext<std::shared_ptr<SoundSystem>>();
+	if (!soundSystem)
+	{
+		LOG_ERROR("Failed to get the SoundSystem from the registry context!");
+		return;
+	}
+	soundSystem->Update(Window::getdt(), *pRegistry);
+
 }
 
 void Application::Render()
@@ -299,5 +335,12 @@ void Application::Render()
 
 void Application::CleanUp()
 {
+	auto& soundSystem = pRegistry->GetContext<std::shared_ptr<SoundSystem>>();
+	if (!soundSystem)
+	{
+		LOG_ERROR("Failed to get the SoundSystem from the registry context!");
+		return;
+	}
+	soundSystem->Shutdown();
 	Window::cleanup();
 }

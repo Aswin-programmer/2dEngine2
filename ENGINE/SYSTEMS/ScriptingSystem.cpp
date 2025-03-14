@@ -120,27 +120,33 @@ void ScriptingSystem::RegisterLuaBindings(sol::state& lua, Registry& registry)
 	GLMBindings::CreateGLMBindings(lua);
 	InputManager::CreateLuaInputBindings(lua);
 	AssetManager::CreateLuaAssetManager(lua, registry);
-	SoundBinder::CreateSoundBind(lua, registry);
 
 	create_timer(lua);
+	
 
 	TransformComponent::CreateLuaTransformBind(lua);
 	SpriteComponent::CreateSpriteLuaBind(lua, registry);
 	AnimationComponent::CreateAnimationLuaBind(lua);
 	BoxColliderComponent::CreateLuaBoxColliderBind(lua);
 	CircleColliderComponent::CreateLuaCircleColliderBind(lua);
+	SoundEmitter::CreateLuaSoundEmitterBind(lua, registry);
+	SoundListener::CreateLuaSoundListenerBind(lua);
 
 	Entity::RegisterMetaComponent<TransformComponent>();
 	Entity::RegisterMetaComponent<SpriteComponent>();
 	Entity::RegisterMetaComponent<AnimationComponent>();
 	Entity::RegisterMetaComponent<BoxColliderComponent>();
 	Entity::RegisterMetaComponent<CircleColliderComponent>();
+	Entity::RegisterMetaComponent<SoundEmitter>();
+	Entity::RegisterMetaComponent<SoundListener>();
 
 	Registry::RegisterMetaComponent<TransformComponent>();
 	Registry::RegisterMetaComponent<SpriteComponent>();
 	Registry::RegisterMetaComponent<AnimationComponent>();
 	Registry::RegisterMetaComponent<BoxColliderComponent>();
 	Registry::RegisterMetaComponent<CircleColliderComponent>();
+	Registry::RegisterMetaComponent<SoundEmitter>();
+	Registry::RegisterMetaComponent<SoundListener>();
 }
 
 void ScriptingSystem::RegisterLuaFunctions(sol::state& lua)

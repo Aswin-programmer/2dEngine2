@@ -7,6 +7,8 @@
 #include "../ECS/Components/AnimationComponent.h"
 #include "../ECS/Components/BoxColliderComponent.h"
 #include "../ECS/Components/CircleColliderComponent.h"
+#include "../ECS/COMPONENTS/SoundEmitter.h"
+#include "../ECS/COMPONENTS/SoundListener.h"
 #include "../ECS/Entity.h"
 #include "../LOGGER/log.h"
 #include "../SCRIPTING/GLMLuaBindings.h"
@@ -14,6 +16,8 @@
 #include "../SCRIPTING/SoundBinding.h"
 #include "../RESOURCES/AssetManager.h"
 #include "../UTILITIES/Timer.h"
+#include "../SOUNDS/AudioEvent.h"
+#include "SoundSystem.h"
 
 #include <sol/sol.hpp>
 

@@ -55,7 +55,7 @@ function CollisionSystem:UpdateCircleCollision()
 							collider_a.bColliding = true
 							table.insert(entitiesToDestroy, entity_a:id())
 						end
-						print("ID: " ..entity_a:id() ..", is colliding with ID: " ..entity_b:id())
+						--print("ID: " ..entity_a:id() ..", is colliding with ID: " ..entity_b:id())
 					end
 					::continue::
 				end

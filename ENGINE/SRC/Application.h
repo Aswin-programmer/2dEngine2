@@ -12,10 +12,12 @@
 #include "../ECS/COMPONENTS/SpriteComponent.h";
 #include "../ECS/COMPONENTS/TransformComponent.h";
 #include "../ECS/COMPONENTS/Identification.h"
+#include "../ECS/COMPONENTS/SoundEmitter.h"
 
 #include "../SYSTEMS/ScriptingSystem.h"
 #include "../SYSTEMS/RenderSystem.h"
 #include "../SYSTEMS/AnimationSystem.h"
+#include "../SYSTEMS/SoundSystem.h"
 
 #include "../SCRIPTING/InputManager.h"
 #include "../WINDOW/INPUT/Keyboard.h"
