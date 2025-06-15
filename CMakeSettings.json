@@ -1,0 +1,29 @@
+{
+    "configurations": [
+
+        {
+            "name": "x64-MSVC-Release",
+            "generator": "Ninja",
+            "configurationType": "Release",
+            "buildRoot": "${projectDir}/build",
+            "inheritEnvironments": [ "msvc_x64_x64" ],
+            "intelliSenseMode": "windows-msvc-x64"
+        },
+        {
+            "name": "x64-MSVC-Debug",
+            "generator": "Ninja",
+            "configurationType": "Debug",
+            "buildRoot": "${projectDir}/build",
+            "inheritEnvironments": [ "msvc_x64_x64" ],
+            "intelliSenseMode": "windows-msvc-x64"
+        },
+        {
+            "name": "x64-MSVC-RelWithDebInfo",
+            "generator": "Ninja",
+            "configurationType": "RelWithDebInfo",
+            "buildRoot": "${projectDir}/build",
+            "inheritEnvironments": [ "msvc_x64_x64" ],
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CMakeScripts/
+CTestTestfile.cmake
+Makefile
+
+# Ninja build files
+build.ninja
+rules.ninja
+.ninja_deps
+.ninja_log
+
+# Compiled object files
+*.obj
+*.o
+*.lo
+*.la
+*.al
+
+# Executable files
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+*.def
+*.exp
+
+# Shared objects (shared libraries)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Debug files
+*.ncb
+*.sdf
+*.opensdf
+*.vcxproj.user
+*.code-workspace
+
+# IDE specific files
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio specific files
+.vs/
+.vscode/
+.vscode
+
+# Build directories
+out/
+build/
+
+# User-specific files
+.user
+.config
+
+# Docs directories
+docs/
+
+
+# Exlude FMOD
+!GAMEENGINE/libs/FMOD/
+!GAMEENGINE/libs/FMOD/**
